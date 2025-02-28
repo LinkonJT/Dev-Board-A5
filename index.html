@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="bg-slate-300" >
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,6 +11,10 @@
       rel="stylesheet"
       type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    
+    <!-- fontawesome for icons-->
+    <script src="https://kit.fontawesome.com/c05f8c2398.js" crossorigin="anonymous"></script>
 
     <!-- Poppins font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -27,5 +31,43 @@
       }
     </style>
   </head>
-  <body></body>
+  <body >
+
+    <!-- ****nav bar **** -->
+
+  <section class= "poppins-regular mt-4" >
+    <nav class="max-w-7xl rounded-md mx-auto bg-white p-4 ">
+      <header>
+       
+        <div class="flex justify-between ">
+          <div class="flex items-center gap-2">
+            <img class="w-10" src="./icons/logo.png" alt="">
+            <h1 class="text-xl">Dev<span class="font-bold">Board</span></h1>
+          </div>
+
+          <div class="flex items-center gap-3">
+             <!-- <img class="w-5" src="./icons/navtick.png" alt=""> -->
+             <div class="bg-slate-100 flex p-4 gap-2 rounded-full">
+              <i class="fa-solid fa-check bg-blue-600 text-white rounded-xs p-2"></i>
+             <h2 class="text-xl font-bold"><span>23</span></h2>
+             </div>
+
+             <div>
+              <button><img class="w-14" src="./icons/color.png" alt=""></button>
+             </div>
+
+          </div>
+
+        </div>
+
+      </header>
+    </nav>
+</section>
+
+
+
+
+
+<script src="./javascript/front.js"></script>
+  </body>
 </html>
