@@ -1,20 +1,22 @@
 <!DOCTYPE html>
-<html lang="en" class="bg-slate-300" >
+<html lang="en" class="bg-slate-300">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dev Board</title>
 
     <!-- Daisy UI version 5 beta -->
+
     <link
-      href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0-beta.8/daisyui.css"
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
       rel="stylesheet"
       type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
-    
     <!-- fontawesome for icons-->
-    <script src="https://kit.fontawesome.com/c05f8c2398.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/c05f8c2398.js"
+      crossorigin="anonymous"></script>
 
     <!-- Poppins font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -31,43 +33,93 @@
       }
     </style>
   </head>
-  <body >
-
+  <body>
     <!-- ****nav bar **** -->
+    <section class="poppins-regular mt-4">
+      <nav class="max-w-7xl rounded-md mx-auto bg-white p-4">
+        <header>
+          <div class="flex justify-between">
+            <div class="flex items-center gap-2">
+              <img class="w-10" src="./icons/logo.png" alt="" />
+              <h1 class="text-xl">Dev<span class="font-bold">Board</span></h1>
+            </div>
 
-  <section class= "poppins-regular mt-4" >
-    <nav class="max-w-7xl rounded-md mx-auto bg-white p-4 ">
-      <header>
-       
-        <div class="flex justify-between ">
-          <div class="flex items-center gap-2">
-            <img class="w-10" src="./icons/logo.png" alt="">
-            <h1 class="text-xl">Dev<span class="font-bold">Board</span></h1>
+            <div class="flex items-center gap-3">
+              <!-- <img class="w-5" src="./icons/navtick.png" alt=""> -->
+              <div class="bg-slate-100 flex p-4 gap-2 rounded-full">
+                <i
+                  class="fa-solid fa-check bg-blue-600 text-white rounded-xs p-2"></i>
+                <h2 class="text-xl font-bold"><span>23</span></h2>
+              </div>
+
+              <div>
+                <button id="random-color">
+                  <div><img class="w-14" src="./icons/color.png" alt="" /></div>
+                </button>
+              </div>
+            </div>
           </div>
+        </header>
+      </nav>
+    </section>
 
-          <div class="flex items-center gap-3">
-             <!-- <img class="w-5" src="./icons/navtick.png" alt=""> -->
-             <div class="bg-slate-100 flex p-4 gap-2 rounded-full">
-              <i class="fa-solid fa-check bg-blue-600 text-white rounded-xs p-2"></i>
-             <h2 class="text-xl font-bold"><span>23</span></h2>
+    <main
+      class="poppins-regular mt-4 max-w-7xl mx-auto rounded-md">
+      <section class="flex flex-grow-0 gap-3 justify-between">
+        <!-- left box -->
+        <div class="bg-white rounded-md w-full">
+          <!-- ****leftBOx Top -->
+          <div class="flex gap-5 p-4">
+            <!-- task assigned -->
+            <div class="bg-slate-200 p-3 flex gap-1 items-center rounded-md">
+              
+              <div class="p-3 bg-slate-100 rounded-full">
+                <i
+                  class="fa-solid fa-check bg-blue-600 text-white rounded-xs p-1"></i>
+              </div>
+  
+              <div>
+                <h2 class="text-xs">Task Assigned</h2>
+                <p class="font-bold text-lg">05</p>
+              </div>
+            </div>
+  
+            <!-- discovering something new -->
+  
+            <div class="p-3 px-10 flex gap-2 flex-grow rounded-md bg-gradient-to-tr from-[#3752FD] to-[#9BA8F8]">
+  
+              <img class="w-12" src="./icons/calendar.png" alt="">
+              <h2 class="text-white">Discover Something <br>New Today!</h2>
+  
+            </div>
+
+            <!-- calendar -->
+             <div  class="bg-slate-200 p-3 flex gap-1 items-center rounded-md">
+              <div class="p-3 bg-slate-100 rounded-full">
+                  <i class="fa-solid fa-calendar-week p-1"></i>
              </div>
 
              <div>
-              <button><img class="w-14" src="./icons/color.png" alt=""></button>
-             </div>
-
+              <h2 class="text-md">Wed,</h2>
+              <p class="font-bold text-lg">Jul 28 2025</p>
+            </div>
           </div>
-
+          </div>
         </div>
 
-      </header>
-    </nav>
-</section>
+        <!-- right side box -->
+        <div class="bg-white p-4 rounded-md w-96 mx-auto">
+          <aside class="space-y-2 text-center">
+            <h2>Activity log</h2>
+            <button class="btn bg-blue-600 text-white mx-12">Clear history</button>
+          </aside>
+        </div>
+      </section>
 
 
 
+    </main>
 
-
-<script src="./javascript/front.js"></script>
+    <script src="./javascript/front.js"></script>
   </body>
 </html>
