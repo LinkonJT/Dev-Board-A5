@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" class="bg-slate-300">
+<!-- class="bg-slate-300" -->
+<html lang="en" >  
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -33,7 +34,8 @@
       }
     </style>
   </head>
-  <body>
+  <body class="bg-slate-300 py-2">
+   
     <!-- ****nav bar **** -->
     <section class="poppins-regular mt-4">
       <nav class="max-w-7xl rounded-md mx-auto bg-white p-4">
@@ -65,10 +67,12 @@
 
     <main
       class="poppins-regular mt-4 max-w-7xl mx-auto rounded-md">
-      <section class="flex flex-grow-0 gap-3 justify-between">
+
+      <!-- ***Main articles and top**** -->
+      <section class="flex flex-grow-0 gap-3 justify-between mb-10">
         <!-- left box -->
         <div class="bg-white rounded-md w-full">
-          <!-- ****leftBOx Top -->
+          <!-- ****leftBOx Top**** -->
           <div class="flex gap-5 p-4">
             <!-- task assigned -->
             <div class="bg-slate-200 p-3 flex gap-1 items-center rounded-md">
@@ -105,12 +109,142 @@
             </div>
           </div>
           </div>
+
+
+          <!-- left div cards container-->
+          <div class="grid grid-cols-3 p-4 border-dashed border-t border-gray-300 gap-5">
+              <!-- card - 1 -->
+              <article class="bg-slate-200 p-4 rounded-md space-y-3">
+
+                <p class="p-2 bg-white w-25 text-sm text-center rounded-md">ShopEase</p>
+
+                <h2 class="text-xl font-medium">Fix Mobile Button Issue</h2>
+
+                <p class=" p-2 bg-white rounded-md text-xs h-12 text-slate-400 truncate ">Debug using Chrome <br> DevTools, check for overlapping elements, and ensure onClick works properly</p>
+
+                <div class="flex items-center justify-between border-dashed border-t border-gray-400  pt-3">
+                  
+                  <div>
+                    <h3 class="text-slate-400 text-xs">Deadline</h3>
+                  <h2 class="font-semibold text-sm">21 March 2025</h2>
+                  </div>
+
+                  <button class="btn bg-blue-600 text-white rounded-md text-sm">completed</button>
+
+                </div>
+              </article>
+              <!-- card - 2 -->
+              <article class="bg-slate-200 p-4 rounded-md space-y-3">
+
+                <p class="p-2 bg-white w-25 text-sm text-center rounded-md">CloudSync</p>
+
+                <h2 class="text-xl font-medium">Add Dark Mode</h2>
+
+                <p class=" p-2 bg-white rounded-md text-xs h-12 text-slate-400 truncate ">Store the user's preference in <br>localStorage, update CSS variables dynamically, and apply a smooth transition effect.</p>
+
+                <div class="flex items-center justify-between border-dashed border-t border-gray-400  pt-3">
+                  
+                  <div>
+                    <h3 class="text-slate-400 text-xs">Deadline</h3>
+                  <h2 class="font-semibold text-sm">21 March 2025</h2>
+                  </div>
+
+                  <button class="btn bg-blue-600 text-white rounded-md text-sm">completed</button>
+
+                </div>
+              </article>
+              <!-- card - 3 -->
+              <article class="bg-slate-200 p-4 rounded-md space-y-3">
+
+                <p class="p-2 bg-white w-25 text-sm text-center rounded-md">SwiftPay</p>
+
+                <h2 class="text-xl font-medium">Optimize Home Page</h2>
+
+                <p class=" p-2 bg-white rounded-md text-xs h-12 text-slate-400 truncate ">Debug using Chrome <br> DevTools, check for overlapping elements, and ensure onClick works properly</p>
+
+                <div class="flex items-center justify-between border-dashed border-t border-gray-400  pt-3">
+                  
+                  <div>
+                    <h3 class="text-slate-400 text-xs">Deadline</h3>
+                  <h2 class="font-semibold text-sm">21 March 2025</h2>
+                  </div>
+
+                  <button class="btn bg-blue-600 text-white rounded-md text-sm">completed</button>
+
+                </div>
+              </article>
+              <!-- card - 4 -->
+              <article class="bg-slate-200 p-4 rounded-md space-y-3">
+
+                <p class="p-2 bg-white w-25 text-sm text-center rounded-md">Meta</p>
+
+                <h2 class="text-xl font-medium">Fix Mobile Button Issue</h2>
+
+                <p class=" p-2 bg-white rounded-md text-xs h-12 text-slate-400 truncate ">Debug using Chrome <br> DevTools, check for overlapping elements, and ensure onClick works properly</p>
+
+                <div class="flex items-center justify-between border-dashed border-t border-gray-400  pt-3">
+                  
+                  <div>
+                    <h3 class="text-slate-400 text-xs">Deadline</h3>
+                  <h2 class="font-semibold text-sm">21 March 2025</h2>
+                  </div>
+
+                  <button class="btn bg-blue-600 text-white rounded-md text-sm">completed</button>
+
+                </div>
+              </article>
+              <!-- card - 5 -->
+              <article class="bg-slate-200 p-4 rounded-md space-y-3">
+
+                <p class="p-2 bg-white w-25 text-sm text-center rounded-md">Google LLC</p>
+
+                <h2 class="text-xl font-medium">Integrate OpenAI API</h2>
+
+                <p class=" p-2 bg-white rounded-md text-xs h-12 text-slate-400 truncate ">Debug using Chrome <br> DevTools, check for overlapping elements, and ensure onClick works properly</p>
+
+                <div class="flex items-center justify-between border-dashed border-t border-gray-400  pt-3">
+                  
+                  <div>
+                    <h3 class="text-slate-400 text-xs">Deadline</h3>
+                  <h2 class="font-semibold text-sm">21 March 2025</h2>
+                  </div>
+
+                  <button class="btn bg-blue-600 text-white rounded-md text-sm">completed</button>
+
+                </div>
+              </article>
+              <!-- card - 6 -->
+              <article class="bg-slate-200 p-4 rounded-md space-y-3">
+
+                <p class="p-2 bg-white w-25 text-sm text-center rounded-md">Glassdoar</p>
+
+                <h2 class="text-xl font-medium">Fix Mobile Button Issue</h2>
+
+                <p class=" p-2 bg-white rounded-md text-xs h-12 text-slate-400 truncate ">Debug using Chrome <br> DevTools, check for overlapping elements, and ensure onClick works properly</p>
+
+                <div class="flex items-center justify-between border-dashed border-t border-gray-400  pt-3">
+                  
+                  <div>
+                    <h3 class="text-slate-400 text-xs">Deadline</h3>
+                  <h2 class="font-semibold text-sm">21 March 2025</h2>
+                  </div>
+
+                  <button class="btn bg-blue-600 text-white rounded-md text-sm">completed</button>
+
+                </div>
+              </article>
+
+          </div>
+
+
         </div>
 
         <!-- right side box -->
         <div class="bg-white p-4 rounded-md w-96 mx-auto">
           <aside class="space-y-2 text-center">
-            <h2>Activity log</h2>
+            <i class="fa-solid fa-clock"> </i>
+            <span class="poppins-regular text-sm">Activity Log</span>
+            
             <button class="btn bg-blue-600 text-white mx-12">Clear history</button>
           </aside>
         </div>
@@ -119,6 +253,8 @@
 
 
     </main>
+
+
 
     <script src="./javascript/front.js"></script>
   </body>
