@@ -1,3 +1,6 @@
+
+
+/**random color button */
 document.getElementById("random-color").addEventListener("click", function () {
   
   const r = Math.floor(Math.random() * 256);
