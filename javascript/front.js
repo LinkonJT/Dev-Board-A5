@@ -1,8 +1,10 @@
 document.getElementById("random-color").addEventListener("click", function () {
-  // event.preventDefault();
-  let randomBodyColor = "#" + Math.floor(Math.random() * 16777215).toString(16);
+  
+  const r = Math.floor(Math.random() * 256);
+  const g = Math.floor(Math.random() * 256);
+  const b = Math.floor(Math.random() * 256);
 
-  document.body.style.background = randomBodyColor;
+  document.body.style.background = `rgb(${r}, ${g}, ${b})`; 
 });
 
 /***********update date ********** */
@@ -11,14 +13,6 @@ function updateDate() {
   const displayDate = document.getElementById("display-date");
 
   let date = new Date();
-  // const currentDate = date.toLocaleDateString("en-US", {
-  //   weekday: "short",
-  //   month: "short",
-  //   day: "2-digit",
-  //   year: "numeric",
-  // });
-
-  // displayDate.innerText = currentDate;
 
   const weekday = date.toLocaleDateString("en-US", {weekday: "short"});
   const month = date.toLocaleDateString("en-US", {month: "short"});
@@ -53,7 +47,7 @@ const remainingTask = document.getElementById("remaining-task");
     const totalRemainingTask = ConvertedRemainingTask - 1;
     remainingTask.innerText = totalRemainingTask;
 
-     if(totalRemainingTask <= 0){
+     if(totalRemainingTask === 0){
       alert("Congrats!!! You have completed all the current tasks");
       remainingTask.innerText = 0;
      }
@@ -67,7 +61,15 @@ const remainingTask = document.getElementById("remaining-task");
       hour12: true
     })
     //activity log - task heading
-    const taskHeading = this.parentElement.parentElement.querySelector(".taskhead").innerText;
+
+    // button.addEventListener("click", function(event){
+    // // const taskHeading = event.target.parentElement.parentElement.querySelector(".taskhead").innerText;
+    // const taskHeading = event.target.closest("article").querySelector(".taskhead").innerText;
+    // console.log(taskHeading);
+    
+    // })
+
+    const taskHeading = this.closest("article").querySelector(".taskhead").innerText;
 
     //final activity log
 
