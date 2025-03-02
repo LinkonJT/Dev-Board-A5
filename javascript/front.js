@@ -31,6 +31,9 @@ for(const button of completedButtons){
   button.addEventListener("click", function(){
     alert ("Board updated successfully")
 
+    //disable button
+    this.disabled = true;
+
     //add to top total
 
     const taskDone = document.getElementById("task-done");
@@ -38,13 +41,17 @@ for(const button of completedButtons){
     const totalTaskDone = convertedTaskDone + 1;
     taskDone.innerText = totalTaskDone;
 
-//remaining task
+//remaining task assigned
 
 const remainingTask = document.getElementById("remaining-task");
     const ConvertedRemainingTask = parseInt(remainingTask.innerText);
     const totalRemainingTask = ConvertedRemainingTask - 1;
     remainingTask.innerText = totalRemainingTask;
 
+     if(totalRemainingTask < 0){
+      alert("No task left to do")
+      remainingTask.innerText = 0;
+     }
 
 
 
@@ -66,7 +73,7 @@ const remainingTask = document.getElementById("remaining-task");
 /************ clear history ***********/
 document.getElementById("clear-history").addEventListener("click", function(){
   const activityContainer = document.getElementById("activity-container");
-  activityContainer.replaceChildren();
+  activityContainer.innerHTML = "";
   
 })
 
