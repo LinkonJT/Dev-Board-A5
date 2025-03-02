@@ -5,22 +5,27 @@ document.getElementById("random-color").addEventListener("click", function () {
   document.body.style.background = randomBodyColor;
 });
 
-//update date
+/***********update date ********** */
 
 function updateDate() {
   const displayDate = document.getElementById("display-date");
 
-  const currentDate = new Date().toLocaleDateString("en-US", {
-    timezone: "dhaka",
-    weekday: "short",
-    month: "short",
-    day: "2-digit",
-    year: "numeric",
-  });
+  let date = new Date();
+  // const currentDate = date.toLocaleDateString("en-US", {
+  //   weekday: "short",
+  //   month: "short",
+  //   day: "2-digit",
+  //   year: "numeric",
+  // });
 
-  displayDate.innerText = currentDate;
+  // displayDate.innerText = currentDate;
+
+  const weekday = date.toLocaleDateString("en-US", {weekday: "short"});
+  const month = date.toLocaleDateString("en-US", {month: "short"});
+  const day = date.toLocaleDateString("en-US", {day: "2-digit"});
+  const year = date.toLocaleDateString("en-US", {year: "numeric"});
+  displayDate.innerHTML = `${weekday}, <br> ${month} ${day} ${year}`;
 }
-
 updateDate();
 
 /*************completed-btn**********/
@@ -50,20 +55,25 @@ const remainingTask = document.getElementById("remaining-task");
 
      if(totalRemainingTask <= 0){
       alert("Congrats!!! You have completed all the current tasks");
-      return;
+      remainingTask.innerText = 0;
      }
 
 
-
-    //completed time update
+    //Activity log - completed time update
     const completedTime = new Date().toLocaleTimeString("en-US",{
       hour: "2-digit",
       minute: "2-digit",
+      second: "2-digit",
       hour12: true
     })
+    //activity log - task heading
+    const taskHeading = this.parentElement.parentElement.querySelector(".taskhead").innerText;
+
+    //final activity log
+
     const activityContainer = document.getElementById("activity-container")
     const div = document.createElement("div");
-    div.innerHTML = `<h2 class="bg-slate-200 rounded-sm text-xs p-4 mb-4">You have completed the task at ${completedTime }</h2>`
+    div.innerHTML = `<p class="bg-slate-200 rounded-sm text-xs p-4 mb-4">You have completed the task <span class="font-medium">${taskHeading} </span> at ${completedTime }</p>`
     activityContainer.appendChild(div);
     
   })
