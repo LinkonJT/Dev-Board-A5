@@ -48,9 +48,9 @@ const remainingTask = document.getElementById("remaining-task");
     const totalRemainingTask = ConvertedRemainingTask - 1;
     remainingTask.innerText = totalRemainingTask;
 
-     if(totalRemainingTask < 0){
-      alert("No task left to do")
-      remainingTask.innerText = 0;
+     if(totalRemainingTask <= 0){
+      alert("Congrats!!! You have completed all the current tasks");
+      return;
      }
 
 
@@ -76,6 +76,15 @@ document.getElementById("clear-history").addEventListener("click", function(){
   activityContainer.innerHTML = "";
   
 })
+
+
+/*********Discover Box *******/
+
+document.getElementById("discover-box").addEventListener("click", function(){
+
+window.location.href = "./blogQ&A.html";
+
+});
 
 
 

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blogs</title>
+
+    <!-- Daisy UI version 5 beta -->
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- fontawesome for icons-->
+    <script
+      src="https://kit.fontawesome.com/c05f8c2398.js"
+      crossorigin="anonymous"></script>
+
+    <!-- Poppins font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet" />
+
+    <style>
+      .poppins-regular {
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+    </style>
+  </head>
+  <body class="bg-slate-300 py-2 h-screen">
+    <!-- ****nav bar **** -->
+    <section class="poppins-regular mt-4 mb-4">
+      <nav class="max-w-7xl rounded-md mx-auto bg-white p-4">
+        <header>
+          <div class="flex justify-between">
+            <div class="flex items-center gap-2">
+              <img class="w-10" src="./icons/logo.png" alt="" />
+              <h1 class="text-xl">Dev<span class="font-bold">Board</span></h1>
+            </div>
+
+            <div>
+              <button
+                id="backtotask-btn"
+                class="btn bg-blue-600 rounded-md text-white font-medium">
+                Back to Task
+              </button>
+            </div>
+          </div>
+        </header>
+      </nav>
+    </section>
+
+    <section class="poppins-regular max-w-7xl mx-auto mt-4">
+      <h1 class="font-bold text-xl text-center mb-4">Blogs</h1>
+
+      <div class="join join-vertical bg-base-100 rounded-md w-full">
+        <div class="collapse collapse-arrow join-item border-base-300 border">
+          <input type="radio" name="my-accordion-4" checked="checked" />
+          <!-- Q - 1 -->
+          <div class="collapse-title font-semibold text-sm">
+            Question-1: What are the different ways to select an element in the
+            DOM?
+          </div>
+          <div class="collapse-content text-sm">
+            we can an element in the DOM by calling it by its ID, classname,
+            tagname. we can use .getElementById(), getElementsByClassName(),
+            querySelectorAll(), querySelector() etc to call those elements.
+          </div>
+        </div>
+
+        <!-- Q-2 -->
+        <div class="collapse collapse-arrow join-item border-base-300 border">
+          <input type="radio" name="my-accordion-4" />
+          <div class="collapse-title font-semibold text-sm">
+            Question-2: What is the difference between innerHTML, innerText, and
+            textContent ?
+          </div>
+          <div class="collapse-content text-sm">
+            the main difference beetween these three atributes are that,
+            innerHTML works with HTML attributes like div, p , h1, h2, h3 etc.
+            To manipulate these inside and element we can use element.innerHTML.
+            <br />
+            innerText is used to set or manipulate the text contents of an
+            element, and it returns results considering the CSS style,
+            JavaScript code. <br />
+
+            But, textContent returns all texts, including hidden texts in an
+            element, without considering the CSS style or JS codes.
+          </div>
+          <!-- Q-3 -->
+        </div>
+        <div class="collapse collapse-arrow join-item border-base-300 border">
+          <input type="radio" name="my-accordion-4" />
+          <div class="collapse-title font-semibold text-sm">
+            Question-3: What is event delegation in the DOM?
+          </div>
+          <div class="collapse-content text-sm">
+            In the DOM event delegation is a technique to add an event listener to the child elements by using the event handler of their parent element.
+          </div>
+        </div>
+        <div class="collapse collapse-arrow join-item border-base-300 border">
+          <input type="radio" name="my-accordion-4" />
+          <div class="collapse-title font-semibold text-sm">
+            Question-4: What is event bubbling in the DOM?
+          </div>
+          <div class="collapse-content text-sm">
+            Event bubble is a mechanism in the DOM where the event handler first works for the innermost element and then goes up to the top of the DOM tree. so, it first works with the lowest child element and then goes up to the parent element.
+          </div>
+        </div>
+        <div class="collapse collapse-arrow join-item border-base-300 border">
+          <input type="radio" name="my-accordion-4" />
+          <div class="collapse-title font-semibold text-sm">
+            Question-5: How do you create, add, and remove elements using
+            JavaScript?
+          </div>
+          <div class="collapse-content text-sm">
+            we can use .createElement(tagName) to create div, p, span etc.
+            <br>
+            we can use .appendChild() to add elements to the parent element.
+            <br>
+            we can use .removeChild() to remove elements from the parent element.
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="./javascript/front.js"></script>
+    <script src="./javascript/blogs.js"></script>
+  </body>
+</html>
